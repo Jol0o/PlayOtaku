@@ -4,10 +4,11 @@ import Link from "next/link";
 import { IconLogout, IconSettings, IconUser } from "@tabler/icons-react";
 import { useRouter } from "next/navigation";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
+import { createClient } from "@supabase/supabase-js";
 
 function LoginNav({ user, session }) {
   const router = useRouter();
-  const supabase = createClientComponentClient();
+  const supabase = createClientComponentClient(createClient);
 
   const signout = async () => {
     await supabase.auth.signOut();
