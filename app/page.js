@@ -1,6 +1,4 @@
-
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
-import { createClient } from '@supabase/supabase-js';
 import Front from './../components/layout/Front';
 import { cookies } from 'next/headers';
 
