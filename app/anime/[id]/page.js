@@ -22,6 +22,7 @@ async function getData(id) {
     }
 }
 
+export const dynamic = 'force-dynamic'
 async function page({ params }) {
     const { id } = params
     const data = await getData(id)
