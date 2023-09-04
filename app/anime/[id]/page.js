@@ -8,7 +8,7 @@ import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 async function getData(id) {
 
     try {
-        const res = await fetch(`https://api.consumet.org/anime/gogoanime/info/${id}`, { cache: 'no-store' });
+        const res = await fetch(`https://api.consumet.org/anime/gogoanime/info/${id}`);
         if (!res.ok) {
             throw new Error(`Failed to fetch data. Status: ${res.status}`);
         }
