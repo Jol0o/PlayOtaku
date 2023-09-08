@@ -3,7 +3,7 @@ import Front from './../components/layout/Front';
 import { cookies } from 'next/headers';
 
 async function getData() {
-  const res = await fetch("https://api.consumet.org/anime/gogoanime/top-airing", { cache: 'no-store' })
+  const res = await fetch("https://api.consumet.org/anime/gogoanime/top-airing")
   if (!res.ok) {
     throw new Error('Failed to fetch data')
   }
@@ -12,7 +12,7 @@ async function getData() {
 
 
 async function getRecent() {
-  const res = await fetch("https://api.consumet.org/anime/gogoanime/recent-episodes", { cache: 'no-store' })
+  const res = await fetch("https://api.consumet.org/anime/gogoanime/recent-episodes")
   if (!res.ok) {
     throw new Error('Failed to fetch data')
   }
